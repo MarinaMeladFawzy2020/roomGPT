@@ -1,0 +1,22 @@
+<button type="button" *ngIf="token !== null"  class="btn btn-primary slider-button userName" >{{userName}}</button>
+
+
+<button type="submit" *ngIf="token == null" class="btn btn-primary slider-button login" [routerLink]="'/login'">Login</button>
+<button type="button" *ngIf="token !== null"  class="btn btn-primary slider-button login"  (click)="logout()">logout</button>
+<button type="submit" *ngIf="token == null" class="btn btn-primary slider-button signin" [routerLink]="'/signup'">Sign In</button>
+
+<section>
+  <p-galleria [value]="images" [responsiveOptions]="responsiveOptions"
+   [containerStyle]="{'max-width': '1600px'}" [numVisible]="4" [circular]="true"
+   [autoPlay]="true" [transitionInterval]="2000">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;"/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block; height: 100px;"/>
+        </div>
+    </ng-template>
+  </p-galleria>
+</section>
+

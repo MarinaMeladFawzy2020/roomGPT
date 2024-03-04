@@ -1,0 +1,105 @@
+<p-toast position="top-left"></p-toast>
+
+<section class="homepage vh-100"  >
+  <div class="container-fluid" >
+    <div class="row d-flex justify-content-center align-items-center h-100" >
+      <div class="row col-12 pt-0" >
+        <div class="col-5 pt-0" >
+          <img class="img-responsive img-cover" src="../assets/images/slides/background1.jpg" />
+
+        </div>
+
+        <div class="col-1"></div>
+
+        <div class="col-5">
+
+          <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-12">
+                <h5 style="padding: 50px 0 0 0; text-align: center;">odaGPT </h5>
+
+                <div class="card shadow-2-strong" style="margin-top: 10%;" >
+                  <div class="card-body">
+                    <h3 class="text-center mt-2 mb-2 ">Login</h3>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                      <div class="p-fluid p-grid">
+                        <label for="inputusername"> UserName * </label>
+                        <div>
+                          <span class="p-input-icon-left">
+                            <i class="pi pi-envelope"></i>
+                            <input type="email" name="userName" formControlName="userName" pInputText placeholder="userName"
+                              [ngClass]="{'border-danger': loginForm.get('userName')?.invalid && loginForm.get('userName')?.errors &&
+                             (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)}  " />
+                          </span>
+                        </div>
+
+                        <div
+                          *ngIf="loginForm.get('userName')?.invalid && loginForm.get('userName')?.errors && (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)">
+                          <div class="form-text text-danger mt-1" *ngIf="loginForm.controls['userName']?.errors?.['required']">
+                            Email is required.</div>
+
+                            <div class="form-text text-danger mt-1" *ngIf="loginForm.controls['userName']?.errors?.['email']">
+                              Email is not valid.</div>
+                        </div>
+
+                      </div>
+                      <br />
+
+                      <div class="p-fluid p-grid">
+                        <label for="inputPassword"> Password * </label>
+                        <div>
+                          <span class="p-input-icon-left">
+                            <i class="pi pi-lock"></i>
+                            <input type="password" name="userPass" formControlName="userPass" pInputText placeholder="Password"
+                              [ngClass]="{'border-danger': loginForm.get('userPass')?.invalid && loginForm.get('userPass')?.errors &&
+                             (loginForm.get('userPass')?.dirty || loginForm.get('userPass')?.touched)}  " />
+                          </span>
+                        </div>
+
+                        <div
+                          *ngIf="loginForm.get('userPass')?.invalid && loginForm.get('userPass')?.errors && (loginForm.get('userPass')?.dirty || loginForm.get('userPass')?.touched)">
+                          <div class="form-text text-danger mt-1" *ngIf="loginForm.controls['userPass']?.errors?.['required']">
+                            Password is required.</div>
+                        </div>
+
+                      </div>
+
+
+                      <br />
+                      <hr class="mt-4 mb-4" />
+
+                      <div class="mt-2 mb-3">
+                        <button type="submit" class="btn btn-default full-width dark-red"
+                          [disabled]="loginForm.invalid || loaderStatus">
+
+                          <div class="spinner-border-sm mr-2"
+                            [class]="loaderStatus ? 'spinner-border show' : 'spinner-border hide' " role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <span class="font-16">Login</span>
+
+                        </button>
+                      </div>
+                      <br />
+                      <div class="form-text text-danger mt-1 text-center">{{showErrorMessage}}</div>
+
+                    </form>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</section>

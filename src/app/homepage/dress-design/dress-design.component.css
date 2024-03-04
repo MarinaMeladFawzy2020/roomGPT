@@ -1,0 +1,8 @@
+.featured-item .property-thumb-info-content{
+  height: 30% !important;
+}
+
+
+.featured-item .property-thumb-info-content:hover{
+  height: auto !important;
+}

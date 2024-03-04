@@ -1,0 +1,55 @@
+
+<section class="pgl-properties pgl-bg-light" style="padding-top: 20px;margin-left: -15px;">
+  <div class="container">
+
+    <div class="card">
+      <app-loading *ngIf="isLoading"></app-loading>
+
+      <p-dataView #dv [value]="products" [paginator]="true" [rows]="3" filterBy="resultType" *ngIf="!isLoading"
+          [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+
+          <ng-template pTemplate="header">
+              <div class="row col-md-12">
+                  <div class="row col-md-10">
+                    <div class="col-md-6">
+                      <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey"
+                       placeholder="Sort By last Updated Date" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0"></p-dropdown>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="p-input-icon-left mb-2 mb-0">
+                          <i class="pi pi-search"></i>
+                          <input type="search" pInputText placeholder="Search by Name" [(ngModel)]="value" (input)="dv.filter(value)" style="height: 35px;">
+                      </span>
+                    </div>
+                  </div>
+
+              </div>
+          </ng-template>
+
+
+
+          <ng-template let-product pTemplate="gridItem">
+              <div class="col-md-4" style="display: inline-flex;" >
+                  <div class="product-grid-item card r-p-m" >
+                      <div class="product-grid-item-content">
+                        <!-- <img [src]="'../assets/images/properties/property-featured.jpg'" [alt]="product.resultType"/> -->
+                        <div >
+                          <img [src]="product.result" [alt]="product.resultType" style="display: inline-flex;width: 361px; height: 361px;"/>
+                        </div>
+                        <div class="product-name">{{product.resultType}}</div>
+                          <div class="product-description">{{product.lastUpdatedDate | date}}</div>
+                      </div>
+
+                  </div>
+              </div>
+
+          </ng-template>
+          <br>
+
+      </p-dataView>
+    </div>
+
+</div>
+</section>
+
+

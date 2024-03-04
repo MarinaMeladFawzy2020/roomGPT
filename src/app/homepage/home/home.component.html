@@ -1,0 +1,717 @@
+<app-slider-home></app-slider-home>
+<app-latest-generated></app-latest-generated>
+
+
+
+		<!-- Begin Featured -->
+    <section class="pgl-featured pgl-bg-grey" >
+      <div class="container">
+        <h2 >Latest Renders</h2>
+        <div class="row">
+
+          <div class="col-md-6 animation">
+            <div class="pgl-property featured-item">
+              <div class="property-thumb-info">
+                <div class="property-thumb-info-image" style="height: 466px;">
+                  <img alt="" class="img-responsive" src="../assets/images/properties/property-featured.jpg">
+                </div>
+                <div class="property-thumb-info-content">
+                  <h3><a href="#">Design 1</a></h3>
+                  <p>Redesign your room in seconds .</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 animation">
+            <div class="row">
+              <div class="col-xs-6 col-md-6 animation">
+                <div class="pgl-property featured-item">
+                  <div class="property-thumb-info">
+                    <div class="property-thumb-info-image">
+                      <img alt="" class="img-responsive" src="../assets/images/properties/property-featured.jpg">
+                    </div>
+                    <div class="property-thumb-info-content">
+                      <h3><a href="#">Design 1</a></h3>
+                      <p>Redesign your room in seconds .</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-6 animation">
+                <div class="pgl-property featured-item">
+                  <div class="property-thumb-info">
+                    <div class="property-thumb-info-image">
+                      <img alt="" class="img-responsive" src="../assets/images/properties/property-featured-1.jpg">
+                    </div>
+                    <div class="property-thumb-info-content">
+                      <h3><a href="#">Design 1</a></h3>
+                      <p>Redesign your room in seconds .</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-md-6 animation">
+                <div class="pgl-property featured-item">
+                  <div class="property-thumb-info">
+                    <div class="property-thumb-info-image">
+                      <img alt="" class="img-responsive" src="../assets/images/properties/property-featured-1.jpg">
+                    </div>
+                    <div class="property-thumb-info-content">
+                      <h3><a href="#">Design 1</a></h3>
+                      <p>Redesign your room in seconds .</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-6 animation">
+                <div class="pgl-property featured-item">
+                  <div class="property-thumb-info">
+                    <div class="property-thumb-info-image">
+                      <img alt="" class="img-responsive" src="../assets/images/properties/property-featured-1.jpg">
+                    </div>
+                    <div class="property-thumb-info-content">
+                      <h3><a href="#">Design 1</a></h3>
+                      <p>Redesign your room in seconds .</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <hr class="top-tall">
+      </div>
+    </section>
+    <!-- End Featured -->
+
+
+
+
+      		<!-- Begin Featured -->
+			<section class="pgl-featured pgl-featured-bottom">
+				<div class="container">
+					<h2  > Latest Render</h2>
+					<div class="row">
+						<div class="owl-carousel pgl-pro-slide" data-plugin-options='{"items": 4, "singleItem": false, "autoPlay": false, "pagination": false}'>
+
+
+              <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+                      <div class="col-md-12 animation">
+                        <div class="pgl-property featured-item">
+                          <div class="property-thumb-info">
+                            <div class="property-thumb-info-image">
+                              <img alt="" class="img-responsive" [src]="product.url">
+                            </div>
+                            <div class="property-thumb-info-content">
+                              <h3><a href="#">{{product.title}}</a></h3>
+                                <p> {{product.desc}} </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </ng-template>
+
+            </p-carousel>
+
+
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- End Featured -->
+
+
+      		<!-- Begin content with sidebar -->
+			<section class="pgl-featured pgl-bg-grey" style="display: none;">
+
+			<div class="container">
+				<div class="row">
+
+
+					<div class="col-md-9 ">
+					<h2 >Latest Renders</h2>
+
+								<div class="properties-full"style="margin-top:-10px;">
+								<div class="listing-header clearfix" style="display: none;">
+
+									<ul class="list-inline list-sort pull-right" >
+										<li><label for="order-status">Order By</label></li>
+										<li>
+											<select id="order-status" name="order-status" data-placeholder="Order" class="chosen-select">
+												<option value="Descending">Descending</option>
+												<option value="Ascending">Ascending</option>
+											</select>
+										</li>
+										<li><label for="sortby-status">filter by</label></li>
+										<li>
+											<select id="sortby-status" name="sortby-status" data-placeholder="filter by" class="chosen-select">
+												<option value=""></option>
+												<option value="property1">property1</option>
+												<option value="property2">property2</option>
+											</select>
+										</li>
+									</ul>
+								</div>
+
+								<div class="row">
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property-1.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+
+									<div class="row">
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property-1.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xs-4 col-md-4 animation">
+									<div class="pgl-property">
+										<div class="property-thumb-info">
+											<div class="property-thumb-info-image">
+												<img alt="" class="img-responsive" src="../assets/images/properties/property.jpg">
+												<span class="property-thumb-info-label">
+													<span class="label price">Professional</span>
+													<span class="label forrent">New</span>
+												</span>
+											</div>
+											<div class="property-thumb-info-content">
+												<h3><a href="#">DESIGN 1 Redesign your room in seconds .</a></h3>
+												<address>DESIGN 1 Redesign your room in seconds .</address>
+											</div>
+											<div class="amenities clearfix">
+												<ul class="pull-left">
+													<li><strong>category:</strong> category 1</li>
+												</ul>
+												<ul class="pull-right">
+													<li><i class="fa fa-download"></i> 3</li>
+													<li><i class="fa fa-eye"></i> 2</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+
+								<ul class="pagination">
+									<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">Next</a></li>
+							   </ul>
+							</div>
+
+					</div>
+
+          <div class="col-md-3 sidebar">
+						<!-- Begin Advanced Search -->
+						<aside class="block pgl-advanced-search pgl-bg-light " style="margin-top: 10px;">
+							<h3>Render Design</h3>
+							<form name="advancedsearch">
+								<div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty11" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property1" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty11" >
+                            <div>{{selectedProperty11.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property11 pTemplate="item">
+                        <div>
+                            <div>{{property11.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+								</div>
+
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty12" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property2" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty12" >
+                            <div>{{selectedProperty12.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty14" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property4" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty14" >
+                            <div>{{selectedProperty14.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty15" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property5" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty15" >
+                            <div>{{selectedProperty15.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty16" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property6" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty16" >
+                            <div>{{selectedProperty16.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+                  <div class="form-group">
+                  <p-dropdown [options]="options" [(ngModel)]="selectedProperty13" optionLabel="name" [ngModelOptions]="{standalone: true}"
+                  [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                    <ng-template pTemplate="selectedItem">
+                        <div   *ngIf="selectedProperty13" >
+                            <div>{{selectedProperty13.name}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-property12 pTemplate="item">
+                        <div>
+                            <div>{{property12.name}}</div>
+                        </div>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+
+
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-block btn-primary">Render Design</button>
+								</div>
+
+
+							</form>
+						</aside>
+				</div>
+
+
+				</div>
+			</div>
+			</section>
+
+			<!-- End content with sidebar -->
+
+
+      <section class="pgl-advanced-search pgl-bg-light pt-5" style="display: none;" >
+        <div class="container">
+          <h2 >Dress Style</h2>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty1" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property1" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty1" >
+                          <div>{{selectedProperty1.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property1 pTemplate="item">
+                      <div>
+                          <div>{{property1.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty2" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property2" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty2" >
+                          <div>{{selectedProperty2.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property2 pTemplate="item">
+                      <div>
+                          <div>{{property2.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty3" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property3" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty3" >
+                          <div>{{selectedProperty3.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property3 pTemplate="item">
+                      <div>
+                          <div>{{property3.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty4" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property4" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty4" >
+                          <div>{{selectedProperty4.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property4 pTemplate="item">
+                      <div>
+                          <div>{{property4.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+            </div>
+
+            <div class="row" >
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty5" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property5" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty5" >
+                          <div>{{selectedProperty5.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property5 pTemplate="item">
+                      <div>
+                          <div>{{property5.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty6" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property6" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty6" >
+                          <div>{{selectedProperty6.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property6 pTemplate="item">
+                      <div>
+                          <div>{{property6.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="options" [(ngModel)]="selectedProperty7" optionLabel="name"
+                [showClear]="true" placeholder="Select a Property7" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedProperty7" >
+                          <div>{{selectedProperty7.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-property7 pTemplate="item">
+                      <div>
+                          <div>{{property7.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <button type="submit" class="btn btn-danger" style="width: inherit;" (click)="renderSubmit()"> RENDER DESIGN</button>
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+
+
+
+
+	<!-- Begin footer -->
+  <footer class="pgl-footer">
+    <div class="container">
+      <div class="pgl-upper-foot">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>Contact detail</h2>
+            <p>Redesign your room in seconds, Design your own interior with the first AI Interior Designer</p>
+            <address>
+              <i class="fa fa-map-marker"></i> Office : 02-422222222<br>
+              <i class="fa fa-phone"></i> Mobile : 01277777777<br>
+              <i class="fa fa-envelope-o"></i> Mail: <a href="mailto:test@gmail.com">test@gmail.com</a>
+            </address>
+          </div>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-4">
+            <h2>Contact US</h2>
+            <p>Redesign your room in seconds, Design your own interior with the first AI Interior Designer</p>
+            <form class="form-inline pgl-form-newsletter" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter your email here">
+              </div>
+              <button type="submit" class="btn btn-submit"><i class="fa fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pgl-copyrights">
+        <p>Copyright © 2023 RoomGPT.Designed by <a href="/home">HighCoder</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer -->
+
+  <a *ngIf="showScrollButton" class="scroll-to-top visible" href="/home" id="scrollToTop"  (click)="scrollToTop()"><i class="fa fa-arrow-up"></i></a>
+

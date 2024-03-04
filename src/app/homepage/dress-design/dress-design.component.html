@@ -1,0 +1,151 @@
+<p-toast position="top-left"></p-toast>
+
+ <!-- Begin Featured -->
+			<section class="pgl-featured ">
+				<div class="container">
+					<h2  > Latest Render Dress</h2>
+					<div class="row">
+
+						<div class="owl-carousel pgl-pro-slide" data-plugin-options='{"items": 4, "singleItem": false, "autoPlay": false, "pagination": false}'>
+              <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+                      <div class="col-md-12 animation">
+                        <div class="pgl-property featured-item">
+                          <div class="property-thumb-info">
+                            <div class="property-thumb-info-image">
+                              <img alt="" class="img-responsive" [src]="'../assets/images/properties/dress_txt.png'">
+                            </div>
+                            <div class="property-thumb-info-content">
+                              <h3 style="color:white ;">{{product.lastUpdatedDate | date:'short' }}</h3>
+                                <p> {{product.prompt}} </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </ng-template>
+            </p-carousel>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- End Featured -->
+<hr>
+
+<!-- Begin Properties -->
+<section class="pgl-properties pgl-bg-light pt-5">
+  <div class="container">
+    <h2 >CATEGORIES</h2>
+    <p-tabView (onChange)="handleChange($event)" [activeIndex]="index" [scrollable]="true">
+      <p-tabPanel *ngFor="let tab of allTabs ; let i = index" [header]="tab.name"  [selected]="index == i" >
+        <form [formGroup]="mainForm"  (ngSubmit)="formSubmit()">
+
+        <div class="row">
+            <div class="row col-md-12 ">
+              <div class="col-xs-6 col-sm-3 mb-2">
+                <p-dropdown [options]="allColors"  optionLabel="name" formControlName="color" [(ngModel)]="selectedColor"
+                [showClear]="true" placeholder="Select Color" [filter]="true" filterBy="name" >
+                  <ng-template pTemplate="selectedItem">
+                      <div   *ngIf="selectedColor" >
+                          <div>{{selectedColor.name}}</div>
+                      </div>
+                  </ng-template>
+                  <ng-template let-propertyColor pTemplate="item">
+                      <div>
+                          <div>{{propertyColor.name}}</div>
+                      </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+
+              <div class="col-xs-6 col-sm-9 mb-2">
+                <textarea class="form-control" rows="1" formControlName="message" placeholder="Write ............. "></textarea>
+              </div>
+
+              <!-- Upload Image-->
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-md-12">
+                  <div style="border: .125em dashed #ddd">
+                    <form id="file-upload-form" class="uploader" style="text-align: center;">
+                      <br>
+                      <input id="file-upload" type="file"  #file [multiple]="false" name="fileUpload" maxFileSize="1000000"
+                      onclick="this.value = null" (change)="onUpload($event)" accept="image/*"  class="hidden" />
+                      <label for="file-upload" id="file-drag">
+                      <img id="file-image" src="#" alt="Preview" class="hidden">
+                      <div id="start">
+                        <div id="notimage" class="hidden">Please select an image</div>
+                        <div class="mb-2"> drag and drop an image here</div>
+                        <button id="file-upload-btn" class="btn btn-primary" href="javascript:void(0)" (click)="file.click()">
+                          <i class="fa fa-download" aria-hidden="true" ></i> Upload Image</button>
+                      </div>
+                      <div class="mt-2">{{files?.name}}</div>
+
+                      </label>
+                    </form>
+                    <br>
+                  </div>
+
+                </div>
+              </div>
+
+              </div>
+              <!--Upload Image-->
+
+
+
+              <div class="col-xs-6 col-sm-12 mb-2">
+                <div class="d-flex justify-content-end border-top pt-3 mt-3  pr-3">
+                  <button  type="submit" class="btn btn-danger mr-2" [disabled]="mainForm.invalid || submitLoaded">
+                    <div class="spinner-border spinner-border-sm text-white mr-2" role="status" *ngIf="submitLoaded">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    RENDER DESIGN</button>
+                  <button class="btn btn-default" type="button" (click)="mainForm.reset()">Reset</button>
+                </div>
+              </div>
+
+            </div>
+
+
+        </div>
+      </form>
+
+      </p-tabPanel>
+      <div id="renderSection">
+          <div *ngIf="this.show" >
+            {{generateDesign}}
+            <div class="col-md-4" >
+              <div class="product-grid-item card r-p-m" >
+                  <div class="product-grid-item-content">
+                    <div>
+                      <img [src]="generateDesign" [alt]="generateDesign" style="display: inline-flex;width: 361px; height: 361px;"/>
+                    </div>
+
+                  </div>
+
+              </div>
+          </div>
+
+          </div>
+       <!-- <app-render-desgin-dress *ngIf="this.show" ></app-render-desgin-dress> -->
+      </div>
+
+
+      <p-tabPanel></p-tabPanel>
+
+  </p-tabView>
+
+
+  </div>
+</section>
+<!-- End Properties -->
+
+
+
+
+
+
+
